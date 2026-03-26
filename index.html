@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mắt Kính Sài Gòn - Ngã Ba Thái Lan</title>
+  <meta name="description" content="Landing page giới thiệu cửa hàng Mắt Kính Sài Gòn - Ngã Ba Thái Lan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f5fa8;
+      --primary-dark: #0b477d;
+      --secondary: #0ac2ff;
+      --accent: #ff9f1c;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+      --bg-soft: #f4f8ff;
+      --radius-lg: 1.25rem;
+      --radius-xl: 1.75rem;
+      --shadow-soft: 0 12px 35px rgba(17, 24, 39, 0.08);
+      --shadow-hover: 0 18px 45px rgba(15, 95, 168, 0.15);
+    }
+
+    html, body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+      background: #ffffff;
+    }
+
+    .section-space {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.65rem, 2vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .navbar-wrap {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(15, 95, 168, 0.08);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.3px;
+    }
+
+    .nav-link {
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary);
+    }
+
+    .btn-primary-custom {
+      background: linear-gradient(135deg, var(--primary), #2c8be0);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 0.75rem 1.35rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(15, 95, 168, 0.25);
+      color: #fff;
+    }
+
+    .btn-outline-custom {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 0.65rem 1.35rem;
+      font-weight: 600;
+    }
+
+    .btn-outline-custom:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(10, 194, 255, 0.15), transparent 35%),
+        radial-gradient(circle at 82% 0%, rgba(255, 159, 28, 0.2), transparent 45%),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      padding: 120px 0 90px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(15, 95, 168, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(15, 95, 168, 0.2);
+      border-radius: 999px;
+      padding: 0.42rem 0.8rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.18;
+      font-weight: 800;
+      margin: 1rem 0;
+    }
+
+    .hero p {
+      color: #4b5563;
+      font-size: 1.05rem;
+      margin-bottom: 1.75rem;
+      max-width: 620px;
+    }
+
+    .hero-image {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 95, 168, 0.14);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+      object-fit: cover;
+    }
+
+    .hero-stats {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .hero-stat-card {
+      background: #fff;
+      border: 1px solid rgba(15, 95, 168, 0.12);
+      border-radius: 1rem;
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    .hero-stat-card strong {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .floating-badge {
+      position: absolute;
+      right: -10px;
+      bottom: 20px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.8rem 0.9rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 95, 168, 0.14);
+      min-width: 180px;
+    }
+
+    .feature-card,
+    .service-card,
+    .product-card,
+    .testimonial-card,
+    .info-card {
+      border: 1px solid rgba(15, 95, 168, 0.12);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+      height: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover,
+    .service-card:hover,
+    .product-card:hover,
+    .testimonial-card:hover,
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .feature-icon,
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--primary);
+      background: rgba(15, 95, 168, 0.12);
+    }
+
+    .product-cover {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-top-left-radius: var(--radius-lg);
+      border-top-right-radius: var(--radius-lg);
+    }
+
+    .product-price {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.12rem;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(15, 95, 168, 0.14);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-swiper {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+
+    .about-swiper .swiper-pagination {
+      position: absolute;
+      bottom: 12px !important;
+    }
+
+    .about-swiper .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, 0.75);
+      opacity: 1;
+    }
+
+    .about-swiper .swiper-pagination-bullet-active {
+      background: #fff;
+    }
+
+    .metric-box {
+      text-align: center;
+      background: #fff;
+      border: 1px solid rgba(15, 95, 168, 0.12);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+
+    .metric-box h3 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 1.55rem;
+      font-weight: 800;
+    }
+
+    .gallery-wrap {
+      background: var(--bg-soft);
+      border-radius: var(--radius-xl);
+      padding: 1.2rem;
+      border: 1px solid rgba(15, 95, 168, 0.12);
+    }
+
+    .gallery-wrap img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .testimonial-card {
+      padding: 1.25rem;
+    }
+
+    .testimonial-swiper {
+      padding: 0.35rem 0.35rem 3.2rem;
+    }
+
+    .testimonial-swiper .swiper-slide {
+      height: auto;
+    }
+
+    .testimonial-swiper .swiper-button-prev,
+    .testimonial-swiper .swiper-button-next {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid rgba(15, 95, 168, 0.2);
+      color: var(--primary);
+      box-shadow: 0 8px 20px rgba(15, 95, 168, 0.14);
+      top: 45%;
+    }
+
+    .testimonial-swiper .swiper-button-prev::after,
+    .testimonial-swiper .swiper-button-next::after {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .testimonial-swiper .swiper-button-prev {
+      left: -8px;
+    }
+
+    .testimonial-swiper .swiper-button-next {
+      right: -8px;
+    }
+
+    .testimonial-swiper .swiper-pagination-bullet-active {
+      background: var(--primary);
+    }
+
+    .testimonial-avatar {
+      width: 54px;
+      height: 54px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 10px rgba(15, 95, 168, 0.18);
+    }
+
+    .rating {
+      color: #f59e0b;
+      letter-spacing: 1px;
+    }
+
+    .contact-panel {
+      background: linear-gradient(135deg, #0f5fa8 0%, #1e90ff 100%);
+      color: #fff;
+      border-radius: var(--radius-xl);
+      padding: 1.4rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-panel .info-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .form-panel {
+      border-radius: var(--radius-xl);
+      background: #fff;
+      border: 1px solid rgba(15, 95, 168, 0.12);
+      box-shadow: var(--shadow-soft);
+      padding: 1.5rem;
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 0.85rem;
+      border-color: #dbe4f1;
+      padding: 0.68rem 0.95rem;
+    }
+
+    .faq .accordion-item {
+      border: 1px solid rgba(15, 95, 168, 0.14);
+      border-radius: 0.95rem !important;
+      overflow: hidden;
+      margin-bottom: 0.85rem;
+    }
+
+    .faq .accordion-button:not(.collapsed) {
+      background: rgba(15, 95, 168, 0.08);
+      color: var(--primary-dark);
+      box-shadow: none;
+    }
+
+    .cta-strip {
+      background:
+        linear-gradient(130deg, rgba(15, 95, 168, 0.95), rgba(10, 194, 255, 0.9)),
+        #0f5fa8;
+      color: #fff;
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    footer {
+      background: #0f172a;
+      color: #d1d5db;
+      padding-top: 70px;
+    }
+
+    .footer-brand {
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+
+    .footer-link {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-bottom: 0.55rem;
+      display: inline-block;
+    }
+
+    .footer-link:hover {
+      color: #fff;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.15);
+      margin-right: 0.45rem;
+    }
+
+    .social-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(15, 95, 168, 0.15);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .notice-modal .modal-content {
+      border: 1px solid rgba(15, 95, 168, 0.2);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .notice-modal .modal-title {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .notice-modal .modal-body {
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 991.98px) {
+      .section-space {
+        padding: 75px 0;
+      }
+
+      .hero {
+        padding-top: 100px;
+      }
+
+      .floating-badge {
+        position: static;
+        margin-top: 1rem;
+      }
+
+      .testimonial-swiper .swiper-button-prev,
+      .testimonial-swiper .swiper-button-next {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-wrap img {
+        height: 210px;
+      }
+
+      .product-cover {
+        height: 190px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="topbar py-2">
+      <div class="container d-flex flex-wrap justify-content-center justify-content-md-between align-items-center gap-2">
+        <span><i class="bi bi-geo-alt-fill me-1"></i> Ngã Ba Thái Lan, Tam Phước, Đồng Nai</span>
+        <span><i class="bi bi-telephone-fill me-1"></i> Hotline: 0979 773 388</span>
+      </div>
+    </div>
+
+    <header class="navbar-wrap sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container py-1">
+          <a class="navbar-brand" href="#home">Mắt Kính Sài Gòn</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item" v-for="item in navItems" :key="item.id">
+                <a class="nav-link" :href="'#' + item.id">{{ item.label }}</a>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary-custom ms-lg-3">Đặt lịch khám mắt</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="hero-badge"><i class="bi bi-stars"></i> Kính đẹp - Giá tốt - Bảo hành uy tín</span>
+            <h1>Khám phá phong cách với <span class="text-primary">Mắt Kính Sài Gòn</span> tại Ngã Ba Thái Lan</h1>
+            <p>
+              Chuyên kính cận, kính thời trang, kính mát chính hãng và tròng chống ánh sáng xanh.
+              Đo mắt chuẩn kỹ thuật, tư vấn tận tâm, chọn kính phù hợp gương mặt và nhu cầu sử dụng.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#products" class="btn btn-primary-custom">Xem bộ sưu tập kính</a>
+              <a href="#about" class="btn btn-outline-custom">Tìm hiểu cửa hàng</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat-card" v-for="stat in heroStats" :key="stat.label">
+                <strong>{{ stat.value }}</strong>
+                <span class="text-muted small">{{ stat.label }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="position-relative">
+              <div class="hero-image">
+                <img src="imgs/khonggian1.webp" alt="Hình đại diện cửa hàng mắt kính">
+              </div>
+              <div class="floating-badge">
+                <div class="fw-bold text-primary mb-1"><i class="bi bi-patch-check-fill me-1"></i> Cam kết chính hãng</div>
+                <small class="text-muted">Hỗ trợ chỉnh kính miễn phí, đổi trả theo chính sách cửa hàng.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" v-for="feature in features" :key="feature.title" data-aos="zoom-in">
+            <div class="feature-card p-4 text-center">
+              <span class="feature-icon mb-3"><i :class="feature.icon"></i></span>
+              <h5 class="fw-bold">{{ feature.title }}</h5>
+              <p class="text-muted mb-0">{{ feature.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section-space pt-0">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Sản phẩm nổi bật</h2>
+          <p class="section-subtitle">
+            Những mẫu kính được khách hàng yêu thích nhất tại cửa hàng. Bạn có thể thay toàn bộ ảnh bên dưới bằng ảnh thật của shop.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4" v-for="product in products" :key="product.name" data-aos="fade-up">
+            <div class="product-card">
+              <img class="product-cover" :src="product.image" :alt="product.name">
+              <div class="p-4">
+                <span class="badge rounded-pill text-bg-light border">{{ product.category }}</span>
+                <h5 class="fw-bold mt-3 mb-2">{{ product.name }}</h5>
+                <p class="text-muted small mb-2">{{ product.desc }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="product-price">{{ product.price }}</span>
+                  <a href="#contact" class="btn btn-sm btn-outline-primary rounded-pill px-3">Tư vấn ngay</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-space bg-light">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="swiper about-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(photo, index) in aboutImages" :key="'about-' + index">
+                  <img class="about-image" :src="photo" :alt="'Không gian cửa hàng mắt kính ' + (index + 1)">
+                </div>
+              </div>
+              <div class="swiper-pagination about-swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <h2 class="section-title mb-3">Về Mắt Kính Sài Gòn - Ngã Ba Thái Lan</h2>
+            <p class="text-muted">
+              Với định hướng mang đến trải nghiệm đo mắt và chọn kính chuyên nghiệp, cửa hàng luôn chú trọng chất lượng sản phẩm
+              cùng dịch vụ hậu mãi. Đội ngũ tư vấn giúp bạn chọn được kiểu kính phù hợp với khuôn mặt, phong cách và ngân sách.
+            </p>
+            <div class="row g-3 mt-2">
+              <div class="col-6" v-for="metric in metrics" :key="metric.label">
+                <div class="metric-box">
+                  <h3>{{ metric.value }}</h3>
+                  <small class="text-muted">{{ metric.label }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section-space">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Dịch vụ tại cửa hàng</h2>
+          <p class="section-subtitle">Đầy đủ các dịch vụ cần thiết từ đo mắt, cắt lắp tròng đến bảo hành và vệ sinh kính định kỳ.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" v-for="service in services" :key="service.title" data-aos="flip-left">
+            <div class="service-card p-4 text-center">
+              <span class="service-icon mb-3"><i :class="service.icon"></i></span>
+              <h5 class="fw-bold">{{ service.title }}</h5>
+              <p class="text-muted mb-0">{{ service.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section-space pt-0">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="section-title">Giới thiệu Mắt Kính Sài Gòn Ngã Ba Thái Lan</h2>
+          <p class="section-subtitle">Được đào tạo bài bản ở các trường đại học danh tiếng về nhãn khoa, chuyên môn và kinh nghiệm lâu năm. Chúng tôi luôn cam kết mang đến cho khách hàng trải nghiệm tốt nhất.</p>
+        </div>
+        <div class="gallery-wrap" data-aos="zoom-in-up">
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" v-for="(photo, index) in galleryImages" :key="index">
+                <img :src="photo" :alt="'Hình gallery ' + (index + 1)">
+              </div>
+            </div>
+            <div class="swiper-pagination gallery-swiper-pagination mt-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section-space bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Khách hàng nói gì?</h2>
+          <p class="section-subtitle">Một vài phản hồi tích cực giúp tăng mức độ tin tưởng cho landing page.</p>
+        </div>
+
+        <div class="swiper testimonial-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="item in testimonials" :key="item.name">
+              <div class="testimonial-card h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <img class="testimonial-avatar" :src="item.avatar" :alt="item.name">
+                  <div>
+                    <h6 class="mb-0 fw-bold">{{ item.name }}</h6>
+                    <small class="text-muted">{{ item.role }}</small>
+                  </div>
+                </div>
+                <div class="rating mb-2">
+                  <i class="bi bi-star-fill" v-for="n in 5" :key="n"></i>
+                </div>
+                <p class="text-muted mb-0">"{{ item.feedback }}"</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination testimonial-swiper-pagination mt-4"></div>
+          <div class="swiper-button-prev testimonial-swiper-prev" aria-label="Previous testimonial"></div>
+          <div class="swiper-button-next testimonial-swiper-next" aria-label="Next testimonial"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space faq">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Câu hỏi thường gặp</h2>
+          <p class="section-subtitle">Phần FAQ giúp khách hàng nắm nhanh thông tin trước khi ghé cửa hàng.</p>
+        </div>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item" v-for="(faq, index) in faqs" :key="faq.question" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                :class="{ collapsed: index !== 0 }"
+                type="button"
+                data-bs-toggle="collapse"
+                :data-bs-target="'#faq-' + index"
+                :aria-expanded="index === 0 ? 'true' : 'false'"
+                :aria-controls="'faq-' + index">
+                {{ faq.question }}
+              </button>
+            </h2>
+            <div
+              class="accordion-collapse collapse"
+              :class="{ show: index === 0 }"
+              :id="'faq-' + index"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted">{{ faq.answer }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5">
+      <div class="container">
+        <div class="cta-strip d-lg-flex justify-content-between align-items-center gap-3">
+          <div>
+            <h3 class="fw-bold mb-2">Sẵn sàng chọn chiếc kính phù hợp nhất?</h3>
+            <p class="mb-0">Liên hệ ngay để được tư vấn mẫu kính, tròng kính và ưu đãi mới nhất trong ngày.</p>
+          </div>
+          <a href="#contact" class="btn btn-light rounded-pill px-4 py-2 fw-semibold mt-3 mt-lg-0">Nhận tư vấn miễn phí</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-space pt-0">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="contact-panel h-100">
+              <h3 class="fw-bold mb-4">Thông tin liên hệ</h3>
+              <div class="vstack gap-3">
+                <div class="info-card p-3">
+                  <strong><i class="bi bi-geo-alt-fill me-2"></i>Địa chỉ</strong>
+                  <div>Ngã Ba Thái Lan, Tam Phước, Đồng Nai</div>
+                </div>
+                <div class="info-card p-3">
+                  <strong><i class="bi bi-telephone-fill me-2"></i>Hotline</strong>
+                  <div>0979 773 388</div>
+                </div>
+                <div class="info-card p-3">
+                  <strong><i class="bi bi-clock-fill me-2"></i>Giờ mở cửa</strong>
+                  <div>07:30 - 21:00 (Thứ 2 - Chủ nhật)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="form-panel mb-4">
+              <h4 class="fw-bold mb-3">Đặt lịch kiểm tra mắt</h4>
+              <form class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Họ và tên">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control" placeholder="Số điện thoại">
+                </div>
+                <div class="col-md-6">
+                  <input type="date" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <select class="form-select">
+                    <option selected>Dịch vụ quan tâm</option>
+                    <option>Đo mắt cắt kính cận</option>
+                    <option>Kính mát thời trang</option>
+                    <option>Thay tròng chống ánh sáng xanh</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <textarea rows="4" class="form-control" placeholder="Nhu cầu của bạn..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="button" class="btn btn-primary-custom" @click="handleContactSubmit">Gửi thông tin</button>
+                </div>
+              </form>
+            </div>
+
+            <a
+              :href="mapUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="d-block"
+              aria-label="Mở vị trí cửa hàng trên Google Maps">
+              <img class="map-placeholder" src="imgs/bando.png" alt="Ảnh placeholder bản đồ cửa hàng">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade notice-modal" id="contactSubmitModal" tabindex="-1" aria-labelledby="contactSubmitModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title" id="contactSubmitModalLabel">
+              <i class="bi bi-info-circle-fill me-2"></i>Thông báo
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body pt-2">
+            Hệ thống tự động nhận thông tin đang được xây dựng, nhấn đồng ý để chuyển tới bản đồ chỉ đường tới cửa hàng ạ.
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-outline-secondary rounded-pill px-3" data-bs-dismiss="modal">Hủy</button>
+            <button type="button" class="btn btn-primary-custom" @click="goToMapFromModal">Đồng ý</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row g-4 pb-4">
+          <div class="col-lg-4">
+            <div class="footer-brand mb-3">Mắt Kính Sài Gòn</div>
+            <p class="text-light-emphasis">
+              Cửa hàng mắt kính tại Ngã Ba Thái Lan với trải nghiệm hiện đại, rõ ràng và tối ưu chuyển đổi.
+            </p>
+            <div>
+              <a href="https://www.facebook.com/kinhthuocsaigondongnai/" class="social-btn"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-btn"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h6 class="text-white fw-bold mb-3">Điều hướng</h6>
+            <a v-for="item in navItems" :key="'footer-' + item.id" class="footer-link d-block" :href="'#' + item.id">{{ item.label }}</a>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <h6 class="text-white fw-bold mb-3">Danh mục</h6>
+            <a href="#" class="footer-link d-block">Kính cận</a>
+            <a href="#" class="footer-link d-block">Kính mát</a>
+            <a href="#" class="footer-link d-block">Kính thời trang</a>
+            <a href="#" class="footer-link d-block">Tròng kính chính hãng</a>
+          </div>
+
+          <div class="col-lg-3">
+            <h6 class="text-white fw-bold mb-3">Liên hệ nhanh</h6>
+            <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Ngã Ba Thái Lan, Tam Phước, Đồng Nai</p>
+            <p class="mb-2"><i class="bi bi-telephone me-2"></i>0979 773 388</p>
+            <p class="mb-0"><i class="bi bi-envelope me-2"></i>matkinhsaigonngabathailan@gmail.com</p>
+          </div>
+        </div>
+        <div class="border-top border-secondary py-3 text-center small text-light-emphasis">
+          © {{ currentYear }} Mắt Kính Sài Gòn - Ngã Ba Thái Lan. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          currentYear: new Date().getFullYear(),
+          mapUrl: "https://www.google.com/maps/place/K%C3%ADnh+Thu%E1%BB%91c+S%C3%A0i+G%C3%B2n+-+k%C3%ADnh+thu%E1%BB%91c+m%E1%BA%AFt+k%C3%ADnh+ch%C3%ADnh+h%C3%A3ng+t%E1%BA%A1i+%C4%90%E1%BB%93ng+Nai,+Ph%C3%B2ng+%C4%91o+kh%C3%A1m+kh%C3%BAc+X%E1%BA%A1+M%E1%BA%AFt+uy+t%C3%ADn/@10.8528457,106.9281132,19.25z/data=!4m15!1m8!3m7!1s0x31751fe5ece6b9a3:0xfb00f800d6fcb618!2zTmfDoyBCYSBUaMOhaSBMYW4sIFBow7luZyBIxrBuZywgVGFtIFBoxrDhu5tjLCBCacOqbiBIw7JhLCDEkOG7k25nIE5haSA4MTAwMDAsIFZp4buHdCBOYW0!3b1!8m2!3d10.8535682!4d106.9285514!16s%2Fg%2F11fphx96y5!3m5!1s0x31751f05c5ffc445:0x86b9a3500253361d!8m2!3d10.8534779!4d106.9286013!16s%2Fg%2F11j9gmd241?entry=ttu&g_ep=EgoyMDI2MDMyMy4xIKXMDSoASAFQAw%3D%3D",
+          navItems: [
+            { id: "home", label: "Trang chủ" },
+            { id: "products", label: "Sản phẩm" },
+            { id: "about", label: "Giới thiệu" },
+            { id: "services", label: "Dịch vụ" },
+            { id: "gallery", label: "Hình ảnh" },
+            { id: "testimonials", label: "Đánh giá" },
+            { id: "contact", label: "Liên hệ" }
+          ],
+          heroStats: [
+            { value: "10K+", label: "Khách hàng hài lòng" },
+            { value: "500+", label: "Mẫu kính đa dạng" },
+            { value: "7/7", label: "Mở cửa mỗi ngày" }
+          ],
+          features: [
+            {
+              icon: "bi bi-shield-check",
+              title: "Chính hãng đảm bảo",
+              desc: "Nguồn gốc rõ ràng, chế độ bảo hành minh bạch."
+            },
+            {
+              icon: "bi bi-eye",
+              title: "Đo mắt chuẩn xác",
+              desc: "Quy trình kiểm tra thị lực kỹ lưỡng, dễ hiểu."
+            },
+            {
+              icon: "bi bi-gem",
+              title: "Mẫu mã hiện đại",
+              desc: "Nhiều phong cách trẻ trung, thanh lịch, cá tính."
+            },
+            {
+              icon: "bi bi-cash-coin",
+              title: "Giá hợp lý",
+              desc: "Nhiều phân khúc giá, tư vấn theo ngân sách."
+            }
+          ],
+          products: [
+            {
+              category: "Kính cận",
+              name: "Gọng Titanium Siêu Nhẹ",
+              desc: "Thiết kế tối giản, đeo êm cả ngày.",
+              price: "Từ 190.000đ",
+              image: "imgs/khonggian2.webp"
+            },
+            {
+              category: "Kính mát",
+              name: "Kính Chống UV Polarized",
+              desc: "Bảo vệ mắt dưới nắng gắt, hạn chế chói.",
+              price: "Từ 250.000đ",
+              image: "imgs/khonggian9.webp"
+            },
+            {
+              category: "Kính thời trang",
+              name: "Gọng Vuông Hàn Quốc",
+              desc: "Phù hợp đi học, đi làm, chụp ảnh.",
+              price: "Từ 120.000đ",
+              image: "imgs/khonggian10.webp"
+            },
+            {
+              category: "Tròng kính",
+              name: "Tròng Chống Ánh Sáng Xanh",
+              desc: "Giảm mỏi mắt khi dùng điện thoại, máy tính.",
+              price: "Từ 180.000đ",
+              image: "imgs/khonggian4.webp"
+            },
+            {
+              category: "Kính cận",
+              name: "Gọng Tròn Cổ Điển",
+              desc: "Phong cách nhẹ nhàng, thanh lịch.",
+              price: "Từ 120.000đ",
+              image: "imgs/khonggian5.webp"
+            },
+            {
+              category: "Combo ưu đãi",
+              name: "Gọng + Tròng Mỏng Nhẹ",
+              desc: "Tiết kiệm chi phí, tối ưu trải nghiệm đeo.",
+              price: "Từ 199.000đ",
+              image: "imgs/khonggian11.webp"
+            }
+          ],
+          metrics: [
+            { value: "8+", label: "Năm kinh nghiệm" },
+            { value: "98%", label: "Khách hàng quay lại" },
+            { value: "15+", label: "Thương hiệu hợp tác" },
+            { value: "24h", label: "Hỗ trợ phản hồi nhanh" }
+          ],
+          aboutImages: [
+            "imgs/khonggian3.webp",
+            "imgs/khonggian11.webp",
+            "imgs/khonggian12.webp",
+            "imgs/khonggian13.webp",
+            "imgs/ql51nhinvao.webp",
+            "imgs/ql51nhinvao2.webp",
+          ],
+          services: [
+            {
+              icon: "bi bi-eyeglasses",
+              title: "Cắt kính lấy nhanh",
+              desc: "Hỗ trợ cắt lắp kính trong thời gian ngắn."
+            },
+            {
+              icon: "bi bi-heart-pulse",
+              title: "Kiểm tra thị lực",
+              desc: "Đo mắt cơ bản và tư vấn tình trạng khúc xạ."
+            },
+            {
+              icon: "bi bi-wrench-adjustable-circle",
+              title: "Chỉnh gọng miễn phí",
+              desc: "Siết ốc, vệ sinh và cân chỉnh định kỳ."
+            },
+            {
+              icon: "bi bi-arrow-repeat",
+              title: "Bảo hành hậu mãi",
+              desc: "Hỗ trợ đổi trả theo chính sách cửa hàng."
+            }
+          ],
+          galleryImages: [
+            "imgs/khammat.webp",
+            "imgs/khammat2.jpg",
+            "imgs/khamtuthien.jpg",
+            "imgs/hoctap3.jpg",
+            "imgs/khonggian12.webp",
+            "imgs/ql51nhinvao.webp",
+            "imgs/hoctap4.jpg"
+          ],
+          testimonials: [
+		  	{
+              name: "Diệu Linh",
+              role: "Giáo viên",
+              avatar: "imgs/ava1.png",
+              feedback: "Giá tốt, nhiều lựa chọn. Cửa hàng tư vấn tận tâm và rõ ràng."
+            },
+            {
+              name: "Minh Anh",
+              role: "Nhân viên văn phòng",
+              avatar: "imgs/ava8.png",
+              feedback: "Mình được đo mắt rất kỹ, tư vấn mẫu kính hợp mặt và giá dễ chịu."
+            },
+            {
+              name: "Tuấn Kiệt",
+              role: "Sinh viên",
+              avatar: "imgs/ava2.png",
+              feedback: "Nhiều mẫu kính trẻ trung, đeo nhẹ và hỗ trợ chỉnh gọng rất nhiệt tình."
+            },
+            {
+              name: "Ngọc Trâm",
+              role: "Chủ shop online",
+              avatar: "imgs/ava5.png",
+              feedback: "Kính mát đẹp, chống chói tốt. Dịch vụ nhanh và chuyên nghiệp."
+            },
+            {
+              name: "Hoàng Duy",
+              role: "Kỹ sư",
+              avatar: "imgs/ava6.png",
+              feedback: "Tròng chống ánh sáng xanh dùng máy tính cả ngày vẫn dễ chịu."
+            },
+            {
+              name: "Quốc Thắng",
+              role: "Tài xế dịch vụ",
+              avatar: "imgs/ava7.png",
+              feedback: "Cắt kính nhanh, đeo thoải mái, tầm nhìn tốt cả ban ngày lẫn ban đêm."
+            }
+          ],
+          faqs: [
+            {
+              question: "Cửa hàng có đo mắt miễn phí không?",
+              answer: "Cửa hàng hỗ trợ đo mắt cơ bản miễn phí khi khách chọn mua kính."
+            },
+            {
+              question: "Bao lâu thì lấy được kính sau khi cắt?",
+              answer: "Tùy loại tròng và độ kính, thời gian thường từ 30 phút đến vài giờ."
+            },
+            {
+              question: "Có hỗ trợ chỉnh kính sau khi mua không?",
+              answer: "Có. Cửa hàng hỗ trợ chỉnh gọng, siết ốc và vệ sinh kính định kỳ."
+            },
+            {
+              question: "Có chính sách đổi trả không?",
+              answer: "Có chính sách đổi trả theo điều kiện cụ thể, bạn có thể liên hệ để được tư vấn chi tiết."
+            }
+          ]
+        };
+      },
+      methods: {
+        handleContactSubmit() {
+          const modalElement = document.getElementById("contactSubmitModal");
+          if (modalElement && window.bootstrap && window.bootstrap.Modal) {
+            window.bootstrap.Modal.getOrCreateInstance(modalElement).show();
+          }
+        },
+        goToMapFromModal() {
+          const modalElement = document.getElementById("contactSubmitModal");
+          if (modalElement && window.bootstrap && window.bootstrap.Modal) {
+            window.bootstrap.Modal.getOrCreateInstance(modalElement).hide();
+          }
+          window.open(this.mapUrl, "_blank", "noopener,noreferrer");
+        }
+      },
+      mounted() {
+        if (window.AOS) {
+          window.AOS.init({
+            duration: 700,
+            easing: "ease-out-cubic",
+            once: true
+          });
+        }
+
+        if (window.Swiper) {
+          new window.Swiper(".testimonial-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            autoplay: {
+              delay: 3200,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: ".testimonial-swiper-pagination",
+              clickable: true
+            },
+            navigation: {
+              nextEl: ".testimonial-swiper-next",
+              prevEl: ".testimonial-swiper-prev"
+            },
+            breakpoints: {
+              768: { slidesPerView: 2 },
+              1200: { slidesPerView: 3 }
+            }
+          });
+
+          new window.Swiper(".about-swiper", {
+            slidesPerView: 1,
+            loop: true,
+            effect: "fade",
+            fadeEffect: {
+              crossFade: true
+            },
+            autoplay: {
+              delay: 2800
+            },
+            pagination: {
+              el: ".about-swiper-pagination",
+              clickable: true
+            }
+          });
+
+          new window.Swiper(".gallery-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            autoplay: {
+              delay: 2600
+            },
+            pagination: {
+              el: ".gallery-swiper-pagination",
+              clickable: true
+            },
+            breakpoints: {
+              768: { slidesPerView: 2 },
+              1200: { slidesPerView: 3 }
+            }
+          });
+        }
+      }
+    }).mount("#app");
+  </script>
+</body>
+</html>
